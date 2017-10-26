@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="XXYMatchMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="508" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="508" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKc-Yo-WDH">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ksB-jN-umk"/>
+                            <constraint firstAttribute="width" constant="30" id="wzs-so-HOx"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Indicator" translatesAutoresizingMaskIntoConstraints="NO" id="7M3-w5-XxH">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Cz5-b6-cuI"/>
+                            <constraint firstAttribute="width" constant="20" id="Lz2-ZH-uua"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gll-wj-l1T">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ajc-z3-lQv"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZl-UB-10i">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kZl-UB-10i" firstAttribute="leading" secondItem="jKc-Yo-WDH" secondAttribute="trailing" constant="10" id="5cT-6Z-Ozz"/>
+                    <constraint firstItem="kZl-UB-10i" firstAttribute="centerY" secondItem="jKc-Yo-WDH" secondAttribute="centerY" id="Hez-9z-XWq"/>
+                    <constraint firstItem="Gll-wj-l1T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="JK6-c7-lYz"/>
+                    <constraint firstItem="jKc-Yo-WDH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="aHo-Rs-Jgr"/>
+                    <constraint firstItem="7M3-w5-XxH" firstAttribute="centerY" secondItem="jKc-Yo-WDH" secondAttribute="centerY" id="jmD-cL-EIg"/>
+                    <constraint firstAttribute="trailing" secondItem="7M3-w5-XxH" secondAttribute="trailing" constant="10" id="kpI-He-YF2"/>
+                    <constraint firstItem="jKc-Yo-WDH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="p3j-MX-dHX"/>
+                    <constraint firstAttribute="bottom" secondItem="Gll-wj-l1T" secondAttribute="bottom" id="u9F-z5-glC"/>
+                    <constraint firstAttribute="trailing" secondItem="Gll-wj-l1T" secondAttribute="trailing" id="yas-UO-Cwy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="jKc-Yo-WDH" id="NQz-ls-DJt"/>
+                <outlet property="lineView" destination="Gll-wj-l1T" id="P6E-b8-yVW"/>
+                <outlet property="titleLabel" destination="kZl-UB-10i" id="Sih-PN-eA9"/>
+            </connections>
+            <point key="canvasLocation" x="-243" y="-35.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Indicator" width="20" height="20"/>
+    </resources>
+</document>

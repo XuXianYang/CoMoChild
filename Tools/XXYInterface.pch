@@ -1,0 +1,65 @@
+#ifndef XXYInterface_pch
+#define XXYInterface_pch
+
+#define MainScreenW ([UIScreen mainScreen].bounds.size.width)
+#define MainScreenH ([UIScreen mainScreen].bounds.size.height)
+
+//#define BaseUrl @"http://test.comoclass.com/dx-svc/service"
+#define BaseUrl @"http://test.comoclass.com/dx-svc/service"
+//192.168.31.108:8080  opus.comoclass.com  // 10.0.0.19  //192.168.1.5:8080 //test.comoclass.com
+
+#define KmyPraiseUrl         @"http://test.comoclass.com/dx-svc/service/student/pg/zanPgAct2me"
+#define kmyPublishDynamicUrl @"http://test.comoclass.com/dx-svc/service/student/pg/sendPgAct2me"
+#define kPraiseMeUrl         @"http://test.comoclass.com/dx-svc/service/student/pg/zanPgAct4me"
+#define kCommentMeUrl        @"http://test.comoclass.com/dx-svc/service/student/pg/discussPgAct4me"
+#define kMyCommentUrl        @"http://test.comoclass.com/dx-svc/service/student/pg/discussPgAct2me"
+
+#define GFBSLogFunc GFBSLog(@"%s", __func__) //打印
+/*****************  屏幕宽高  ******************/
+#define  GFScreenHeight [UIScreen mainScreen].bounds.size.height
+#define  GFScreenWidth [UIScreen mainScreen].bounds.size.width
+
+/*****************  屏幕适配  ******************/
+#define iphone6p (GFScreenHeight == 763)
+#define iphone6 (GFScreenHeight == 667)
+#define iphone5 (GFScreenHeight == 568)
+#define iphone4 (GFScreenHeight == 480)
+
+/*****************  全局背景色  ******************/
+#define GFBgColor  [UIColor colorWithRed:(239/255.0) green:(239/255.0) blue:(244/255.0) alpha:1.0]
+#define XXYBgColor  [UIColor colorWithRed:(239/255.0) green:(239/255.0) blue:(244/255.0) alpha:1.0]
+#define XXYCharacterBgColor  [UIColor colorWithRed:(50/255.0) green:(50/255.0) blue:(50/255.0) alpha:1.0]
+#define XXYMainColor  [UIColor colorWithRed:(248.0/255.0) green:(143.0/255.0) blue:(51/255.0) alpha:1.0]
+
+/*****************  tag景色  ******************/
+#define GFTagBgColor  [UIColor colorWithRed:74 / 255.0 green:139 / 255.0 blue:209 / 255.0 alpha:1.0]
+/*****************  tag字体尺寸  ******************/
+#define GFTagFont [UIFont systemFontOfSize:14]
+/*****************  系统适配  ******************/
+#define GFIOS(version) ([UIDevice currentDevice].systemVersion.doubleValue >= (version))
+
+
+#define DocumentImagePathName @"Picture"
+#define DocumentVideoPathName @"Video"
+#define FileListName @"FileList.plist"
+//calorie_card
+#define loadMoreOfNonePic @"hasNoContent"
+
+#endif /* XXYInterface_pch */
+
+#import "XXYNavigationController.h"
+#import"UINavigationController+XXYNav.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "JPUSHService.h"
+
+#import "XXYMyTools.h"
+
+#import "NSCalendar+GFExtension.h"
+#import "NSDate+GFExtension.h"
+
+#ifdef DEBUG//调试
+#define GFBSLog(...) NSLog(__VA_ARGS__)
+#else//发布
+#define GFBSLog(...)
+#endif
+
